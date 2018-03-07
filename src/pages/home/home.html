@@ -7,8 +7,16 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <input type="number" [(ngModel)]="param1" />
+  <input type="number" [(ngModel)]="param2" />
+
+  <button ion-button full (click)="promiseTest(param1, param2)" >Test promise</button>
+  <button ion-button full (click)="promiseRace(param1, param2)" >Test promise race</button>
+
+  <br>
+
+  <p>Timer Value: {{value}} </p>
+  <button ion-button full (click)="start()" >Start</button>
+  <button ion-button full (click)="stop()">Stop</button>
+
 </ion-content>
